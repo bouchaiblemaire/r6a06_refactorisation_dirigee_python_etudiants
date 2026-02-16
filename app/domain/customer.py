@@ -6,8 +6,26 @@ from .rental import Rental
 
 class Customer:
     def __init__(self, name: str):
-        self.name = name
+        self._name = name
         self._rentals: list[Rental] = []
+
+
+    @property
+    def name(self) -> str:
+        return self._name
+
+    @property
+    def rentals(self) -> list[Rental]:
+        return self._rentals
+
+    @name.setter
+    def name(self, name: str):
+        self._name = name
+
+    @rentals.setter
+    def rentals(self, rentals: list[Rental]):
+        self._rentals = rentals
+
 
     def add_rental(self, arg: Rental):
         self._rentals.append(arg)
@@ -18,7 +36,7 @@ class Customer:
 
         rentals = iter(self._rentals)
 
-        result = "Record for " + self.name + "\n"
+        result = "Record for " + self._name + "\n"
         while True:
             try:
                 this_amount = 0.0

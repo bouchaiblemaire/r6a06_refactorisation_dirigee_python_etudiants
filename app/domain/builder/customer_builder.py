@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from .customer import Customer
-from .rental import Rental
+from app.domain.customer import Customer
+from app.domain.rental import Rental
 
 
 class CustomerBuilder:
