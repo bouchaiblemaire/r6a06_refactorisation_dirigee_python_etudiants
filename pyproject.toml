@@ -1,0 +1,9 @@
+[project]
+name = "r6a06-customer-refactoring"
+version = "0.1.0"
+description = "Traduction Python du mini-projet Customer/Movie/Rental (support de revue de code R6A06)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
